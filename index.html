@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -1995,4 +1996,2003 @@
 
 
 
+=======
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音色是什么</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="sha384-R511BMEC5H8tycr48yRqL5ZpP23EB9uP9z4kq8fDn2k7X7368X7Qy9F1XZ7Xv2X5w==" crossorigin="anonymous" defer></script>
+                    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // 理论基础配色
+                        academic: {
+                            primary: '#1a365d', // 深蓝
+                            secondary: '#4a5568', // 深灰
+                            accent: '#2b6cb0', // 中蓝
+                            light: '#f7fafc', // 浅灰
+                            dark: '#1a202c', // 近黑
+                        },
+                        // 赛博朋克风格配色
+                        cyberpunk: {
+                            primary: '#0a192f', // 深靛蓝
+                            secondary: '#64ffda', // 霓虹青
+                            accent: '#ff79c6', // 霓虹粉
+                            highlight: '#bd93f9', // 霓虹紫
+                            dark: '#1e1e2e', // 深紫黑
+                        }
+                    },
+                    fontFamily: {
+                        academic: ['Merriweather', 'Georgia', 'serif'],
+                        cyberpunk: ['Rajdhani', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            #main_title {
+            text-align: center;         /* 文本水平居中 */
+            color: white;               /* 文字颜色为白色 */
+            font-size: 4.5rem;          /* 字体大小（根据需要调整，2.5rem约等于40px） */
+            font-weight: bold;          /* 字体加粗（可选） */
+            margin: 0 auto;             /* 块级元素居中（如果main_title是块级元素） */
+            display: block;             /* 确保是块级元素（可选） */
+            width: fit-content;         /* 宽度自适应内容（可选） */
+            line-height: 1.2;           /* 行高（可选，建议1.2-1.5） */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 文字阴影（可选，增强可读性） */
+            }
+            #author_info {
+            text-align: center;         /* 文本水平居中 */
+            font-size: 1rem;        /* 字体大小（约14px，根据需要调整） */
+            color: #adabab;                /* 文字颜色（可选，使用灰色增强可读性） */
+            margin: 0 auto;             /* 块级元素居中 */
+            display: block;             /* 确保是块级元素 */
+            width: fit-content;         /* 宽度自适应内容 */
+            line-height: 2.2;           /* 行高（可选） */
+            opacity: 0.8;               /* 轻微透明（可选） */
+            }
+            .academic-shadow {
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+            .cyber-border {
+                border: 1px solid rgba(100, 255, 218, 0.3);
+            }
+            .cyber-glow {
+            }
+            .cyber-text-glow {
+                text-shadow: 0 0 5px rgba(100, 255, 218, 0.7);
+            }
+            .academic-transition {
+                transition: all 0.3s ease;
+            }
+            .cyber-transition {
+                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.03);
+            }
+            .cyber-slider-track {
+                background: linear-gradient(90deg, #0a192f, #64ffda, #ff79c6, #bd93f9);
+            }
+            .cyber-slider-thumb {
+                @apply w-6 h-6 rounded-full bg-white border-2 border-cyberpunk-secondary shadow-lg cursor-pointer;
+            }
+            .instrument-card {
+                @apply bg-cyberpunk-dark rounded-xl p-5 cyber-border cyber-glow transition-all duration-300 opacity-0 scale-95 absolute top-0 left-0 w-full pointer-events-none;
+            }
+            .instrument-card.active {
+                @apply opacity-100 scale-100 pointer-events-auto;
+            }
+            nav > p {
+            font-weight: bold;           /* 加粗字体 */
+            color: #333;                /* 深色文字 */
+            color: white;         /* 深色模式下白色文字 */
+            text-transform: uppercase; /* 转为大写（可选） */
+            letter-spacing: 1px;        /* 增加字母间距 */
+            margin-right: 8px;          /* 右侧留出间距 */
+            padding: 8px 0;             /* 垂直居中对齐 */
+            display: flex;              /* 启用flex布局 */
+            align-items: center;        /* 垂直居中 */
+}
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-academic-light dark:bg-academic-dark transition-colors duration-500">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-academic-primary/80 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-academic-primary flex items-center justify-center text-white">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <h1 class="text-xl font-bold text-academic-primary dark:text-white">音色是什么</h1>
+                </div>
+                
+                <div class="flex space-x-2">
+                    
+                </div>
+            </nav>
+            
+            <!-- 标签页 -->
+            <div class="mt-4 flex border-b border-gray-200 dark:border-academic-secondary">
+                <button id="tab-academic" class="tab-button flex-1 py-3 px-4 font-medium text-academic-primary border-b-2 border-academic-primary dark:text-white">
+                    <i class="fa-solid fa-book mr-2"></i>理论基础
+                </button>
+                <button id="tab-cyberpunk" class="tab-button flex-1 py-3 px-4 font-medium text-gray-500 dark:text-gray-400 border-b-2 border-transparent">
+                    <i class="fa-solid fa-microchip mr-2"></i>更多示例
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 理论基础内容 -->
+    <section id="content-academic" class="container mx-auto px-4 py-8">
+        <p id="main_title">音色是什么</p>
+        <p id="author_info">北京大学物理学院-郑涵予 王彦同</p>
+        <!-- 网页导航栏 -->
+        <div class="sticky top-20 z-40 bg-white/80 dark:bg-academic-primary/80 backdrop-blur-md shadow-md rounded-lg p-3 mb-8">
+            <nav class="flex flex-wrap justify-center gap-4">
+                <p >页面导航</p>
+                <a href="#fft-con" class="px-4 py-2 rounded-md bg-academic-light hover:bg-accent/20 dark:bg-academic-dark dark:hover:bg-accent/30 transition-colors duration-300 text-academic-primary dark:text-white font-medium">
+                    <i class="fa-solid fa-book mr-2"></i>傅里叶变换
+                </a>
+                <a href="#pptdyr" class="px-4 py-2 rounded-md bg-academic-light hover:bg-accent/20 dark:bg-academic-dark dark:hover:bg-accent/30 transition-colors duration-300 text-academic-primary dark:text-white font-medium">
+                    <i class="fa-solid fa-book-open mr-2"></i>频谱图
+                </a>
+                <a href="#yslh" class="px-4 py-2 rounded-md bg-academic-light hover:bg-accent/20 dark:bg-academic-dark dark:hover:bg-accent/30 transition-colors duration-300 text-academic-primary dark:text-white font-medium">
+                    <i class="fa-solid fa-calculator mr-2"></i>音色量化
+                </a>
+                
+            </nav>
+        </div>
+        <div class="prose max-w-none dark:prose-invert prose-lg">
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-academic-primary dark:text-white mb-6">理论基础</h1>
+            
+            
+            
+            <!-- 音色是什么内容 -->
+            <div id="content-what-is-timbre" class="space-y-8">
+                <!-- 引入部分 -->
+                <div class="bg-white dark:bg-academic-primary rounded-lg shadow-lg p-6 academic-transition">
+                    <h2 class="text-2xl font-bold text-academic-primary dark:text-white mb-4">引入</h2>
+                    
+                    <div class="mb-4">
+                        <p id="fft-con" class="text-gray-700 dark:text-gray-300 mb-4">奶龙的音色具有独特的魅力</p>
+                        
+                        <div class="bg-gray-50 dark:bg-academic-secondary/20 rounded-lg p-4 mb-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-academic-primary/10 flex items-center justify-center text-academic-primary mr-4">
+                                    <i class="fa-solid fa-volume-up text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-gray-800 dark:text-white mb-1">奶龙声音示例</h3>
+                                    <audio controls class="w-full">
+                                        <source src="./素材/音频素材/奶龙精简版.mp3" type="audio/mpeg">
+                                        您的浏览器不支持音频播放。
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p  class="text-gray-700 dark:text-gray-300">本网页的主要目的就是探究，什么是音色，以及如何将音色量化，这其中要用到傅里叶变换————</p>
+                    </div>
+                </div>
+                
+                <!-- 分析理论介绍部分 -->
+                <div id="fft-container" data-expanded="false" class="bg-white dark:bg-academic-primary rounded-lg shadow-lg p-6 academic-transition">
+                    <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold text-academic-primary mb-2">分析理论介绍</h2>
+                        <h3 class="text-lg font-semibold text-gray-600 mb-4">傅里叶变换与快速傅里叶变换</h3>
+                        
+                        <p class="mb-4">
+                          傅里叶变换作为连接时域与频域的桥梁，其核心思想是将任意周期信号分解为不同频率的正弦/余弦分量的叠加。在连续时间域中，傅里叶变换通过积分运算实现这一过程，其正变换表达式为：
+                          <div class="formula text-center my-3">
+                            \[
+                            F(\omega) = \int_{-\infty}^{\infty} f(t) \cdot e^{-i\omega t} \, dt
+                            \]
+                          </div>
+                          该式子揭示了信号 $ f(t) $ 在频域的分布 $ F(\omega) $，为信号的频率特性分析提供了理论基础。
+                        </p>
+                      
+                        <p class="mb-4">
+                          而快速傅里叶变换（Fast Fourier Transform, FFT）是数字信号处理领域最具革命性的算法之一，其核心意义在于通过数学优化将傅里叶变换（FT）的计算复杂度从难以承受的 $ O(n^2) $ 降低到 $ O(n \log n) $。通过计算效率的突破，让频域分析成为现代科技的底层语言。毫不夸张地说，没有 FFT，就没有今天的数字通信、多媒体技术和海量数据处理能力。以下是本组同学对此算法的理论推导过程：
+                        </p>
+                      </div>
+                    
+                    <!-- 摘要（始终可见） -->
+                    <h4 class="text-lg font-semibold mb-2" style="font-size: 28px;">摘要</h4>
+                      
+                    <div class="abstract mb-4" id="pptdyr">
+                      <p>傅里叶变换作为连接时域与频域的核心工具，在现代信息处理领域发挥着重要作用.本文首先以离散傅里叶变换为切入点，介绍了在实际应用中更为有效的快速傅里叶变换与短时傅里叶变换，并深入探讨短时傅里叶变换的时间–频率不确定性关系，系统分析了傅里叶变换在信号处理中的理论基础.</p>
+                      <p>关键词：快速傅里叶变换、短时傅里叶变换、不确定性关系.</p>
+                    </div>
+                    
+                    <!-- 全文（初始隐藏） -->
+                    <div class="full-text">
+                      <h4 class="text-lg font-semibold mb-2" style="font-size: 30px;">一、离散傅里叶变换（DFT)的引入</h4>
+                      <p>在时间连续域中，信号一般用带有时间变量的函数表示,熟知的连续傅里叶变换及其逆变换可以表示为：</p>
+                      <div class="formula">
+                        \[ F(\omega) = \int_{-\infty}^{\infty} f(t) \cdot e^{-i \omega t} \, dt \]
+                      </div>
+                      <div class="formula">
+                        \[ f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) \cdot e^{i \omega t} \, d\omega \]
+                      </div>
+                      <p>利用傅里叶变换，可以将时域信号转换到频域，进而揭示信号的频率组成，为进一步的分析奠定基础.但是，在实际的处理中，我们往往要利用计算机来完成对信号的分析，而计算机中信息的存储总是离散化的，难以直接对连续的积分表达式进行计算，因此我们需要引入离散傅里叶变换.</p>
+                      <p>假设要对一个时间范围在$[0,T]$的信号设置$N$个等距采样点进行采样，令$f_n=f(\frac{nT}{N})$，可以将一个信号$f(t)$映射到:</p>
+                      <div class="formula">
+                        \[ \boldsymbol{f} = \begin{pmatrix} f_0 \\ f_1 \\ \vdots \\ f_{N-1} \end{pmatrix} \]
+                      </div>
+                      <p>为了将原信号分解为不同频率信号的叠加，可以考虑利用$N$次单位根来构造$N$维复线性空间$\mathbb{C}^N$中的一组正交基，设$\omega = e^{2\pi i / N}$，令$(\boldsymbol{u}_k)_n = \omega^{kn}$，即:</p>
+                      <div class="formula">
+                        \[ \boldsymbol{u}_k^T = (1, \omega^{k}, \omega^{2k}, \ldots, \omega^{k(N-1)}) \]
+                      </div>
+                      <p>为了便于归一化，定义两个向量间内积：</p>
+                      <div class="formula">
+                        \[ \langle  \boldsymbol{a}, \boldsymbol{b} \rangle \equiv \frac{1}{N} \sum _ {n=0} ^ {N-1} ( \boldsymbol{a})_n ( \boldsymbol{b})_n^* \]
+                      </div>
+                      <p>计算$\boldsymbol{u}_k, \boldsymbol{u}_l$之间的内积：</p>
+                      <p>当 $k = l$ 时：</p>
+                      <div class="formula">
+                        \[ \langle \boldsymbol{u}_k, \boldsymbol{u}_l \rangle = \frac{1}{N} \boldsymbol{u}_k \boldsymbol{u}_k^* = \frac{1}{N} (1 + 1 + \cdots + 1) = 1 \]
+                      </div>
+                      <p>当 $k \neq l$ 时，$\omega^{k-l}\neq1$,故：</p>
+                      <div class="formula">
+                        \[ \langle \boldsymbol{u}_k, \boldsymbol{u}_l \rangle = \frac{1}{N} \sum_{m=0}^{N-1} \omega^{m(k-l)} = \frac{1}{N} \cdot \frac{1 - \omega^{N(k-l)}}{1 - \omega^{k-l}} \]
+                      </div>
+                      <p>由于 $\omega^{N(k-l)} = \omega^{2\pi i(k-l)} = 1$：</p>
+                      <div class="formula">
+                        \[ \langle \boldsymbol{u}_k, \boldsymbol{u}_l \rangle = 0 \]
+                      </div>
+                      <p>因此：</p>
+                      <div class="formula">
+                        \[ \langle \boldsymbol{u}_k, \boldsymbol{u}_l \rangle = \delta_{kl} \]
+                      </div>
+                      <p>根据线性代数知识，这便证明了$\boldsymbol{u}_0,\boldsymbol{u}_1\cdots \boldsymbol{u}_{N-1}$是$\mathbb{C}^N$中的一组完备正交基,$\mathbb{C}^N$中的任意一个向量都可以由这一组基底唯一表出.由此我们可以得到离散傅里叶变换及其逆变换的表达式：</p>
+                      <div class="formula">
+                        \[ F_k = \langle  \boldsymbol{f}, \boldsymbol{u}_k \rangle =\frac{1}{N}\sum_{n=0}^{N-1} f_n\,e^{-2\pi i kn/N},\]
+                      </div>
+                      <div class="formula">
+                        \[f_n = \sum_{k=0}^{N-1} F_k\,e^{2\pi i kn/N}.\]
+                      </div>
+                      <p>显然选取的$N$越大从原信号中获取的信息就越多，事实上，根据香农采样定理，为了不失真地恢复模拟信号，采样频率应不小于模拟信号频谱中最高频率的两倍.</p>
+                    
+                      <h4 class="text-lg font-semibold mb-2 mt-4" style="font-size: 30px;">二、DFT的优化---快速傅里叶变换(FFT)</h4>
+                      <p>直接使用DFT时，如果想对$N$个点进行采样，计算一个$F_k$就需要$N$次运算，计算全部系数一共要进行$N^2$次运算，逆变换也同理.这意味着DFT的时间复杂度是$O(N^2)$,因此在实际的应用中常应用FFT来加快计算速度。定义一个多项式：</p>
+                      <div class="formula">
+                        \[ f(x) = a_0 + a_1 \cdot x^1 + a_2 \cdot x^2 + a_3 \cdot x^3 + \ldots + a_{N-1} \cdot x^{N-1} \]
+                      </div>
+                      <p>这里先假设$N$是2的整数幂次，要求这个多项式在所有$N$次单位根处的取值，考虑将其按照奇偶分组：</p>
+                      <div class="formula">
+                        \[ f(x) = (a_0 + a_2 \cdot x^2 + a_4 \cdot x^4 + \ldots + a_{N-2} \cdot x^{N-2}) + x \cdot (a_1 + a_3 \cdot x^2 + a_5 \cdot x^4 + \ldots + a_{N-1} \cdot x^{N-2}) \]
+                      </div>
+                      <p>令：</p>
+                      <div class="formula">
+                        \[ f_a(x) = (a_0 + a_2 \cdot x + a_4 \cdot x^2 + \ldots + a_{N-2} \cdot x^{\frac{N}{2}-1}) \]
+                      </div>
+                      <div class="formula">
+                        \[ f_b(x) = (a_1 + a_3 \cdot x + a_5 \cdot x^2 + \ldots + a_{N-1} \cdot x^{\frac{N}{2}-1}) \]
+                      </div>
+                      <p>则可得到：</p>
+                      <div class="formula">
+                        \[ f(x) = f_a(x^2) + x \cdot f_b(x^2) \]
+                      </div>
+                      <p>令$\omega_N=e^{\frac{2\pi i}{N}}$,对 $0 \leq k \leq \frac{N}{2}-1$，$k \in \mathbb{Z}$：</p>
+                      <div class="formula">
+                        \[ f\left(\omega_{N}^{k}\right) = f_a\left(\omega_{N}^{2k}\right) + \omega_{N}^{k} \cdot f_b\left(\omega_{N}^{2k}\right) \]
+                      </div>
+                      <p>利用$\omega_{N}^{2k}=\omega_{\frac{N}{2}}^{k}$：</p>
+                      <div class="formula">
+                        \[ f\left(\omega_{N}^{k}\right) = f_a\left(\omega_{\frac{N}{2}}^{k}\right) + \omega_{N}^{k} \cdot f_b\left(\omega_{\frac{N}{2}}^{k}\right) \]
+                      </div>
+                      <p>对于 $\frac{N}{2} \leq k + \frac{N}{2} \leq N-1$的项：</p>
+                      <div class="formula">
+                        \[ f\left(\omega_{N}^{k+\frac{N}{2}}\right) = f_a\left(\omega_{N}^{2k + N}\right) + \omega_{N}^{k+\frac{N}{2}} \cdot f_b\left(\omega_{N}^{2k + N}\right) \]
+                      </div>
+                      <p>其中：</p>
+                      <div class="formula">
+                        \[ \omega_{N}^{2k + N} = \omega_{N}^{2k} \cdot \omega_{N}^{N} = \omega_{N}^{2k} = \omega_{\frac{N}{2}}^{k} \]
+                      </div>
+                      <div class="formula">
+                        \[ \omega_{\frac{N}{2}}^{k+\frac{N}{2}} = -\omega_{N}^{k} \]
+                      </div>
+                      <p>故：</p>
+                      <div class="formula">
+                        \[ f\left(\omega_{\frac{N}{2}}^{k+\frac{N}{2}}\right) = f_a\left(\omega_{\frac{N}{2}}^{k}\right) - \omega_{N}^{k} \cdot f_b\left(\omega_{\frac{N}{2}}^{k}\right) \]
+                      </div>
+                      <p>$k$ 与 $k + \frac{N}{2}$ 取遍了 $[0, N-1]$ 中的 $N$ 个整数，保证了可以由这 $N$ 个点值反推解出系数.</p>
+                      <p>于是我们可以发现，如果已知了 $f_a(x)$、$f_b(x)$ 分别在 $\omega_{\frac{N}{2}}^{0}, \omega_{\frac{N}{2}}^{1}, \ldots, \omega_{\frac{N}{2}}^{\frac{N}{2}-1}$ 处的取值，可以在 $O(N)$ 的时间内求出 $f(x)$ 的取值.而 $f_a(x)$、$f_b(x)$ 都是 $f(x)$ 一半的规模，可以转化为子问题递归求解，这样一来便将计算的时间复杂度降低到$O(NlogN)$，大大提高了效率.</p>
+                      <p>在计算逆变换时，令：</p>
+                      <div class="formula">
+                        \[
+                        f_i = \sum_{k=0}^{N-1} a_k (w_N^i)^k
+                        \]
+                      </div>
+                      <p>则：</p>
+                      <div class="formula">
+                        \[
+                        \sum_{k=0}^{N-1} f_k (w_N^{-i})^k = \sum_{k=0}^{N-1} \left( \sum_{j=0}^{N-1} a_j (w_N^k)^j \right) (w_N^{-i})^k = \sum_{k=0}^{N-1} \sum_{j=0}^{N-1} a_j w_N^{k(j-i)}
+                        \]
+                      </div>
+                      <p>交换求和顺序并利用$\sum_{k=0}^{N-1}w_N^{k(j-i)}=N\delta_{ij}$可得:</p>
+                      <div class="formula">
+                        \[
+                        N a_i = \sum_{k=0}^{N-1} f_k (w_N^{-i})^k
+                        \]
+                      </div>
+                      <p>因此只需考虑以$f_i$为系数的多项式，再次使用FFT计算多项式在$\omega_n^{-i}$处的取值，就实现了逆变换.</p>
+                      <p>以上是FFT的基本思想，其也常被用来快速计算多项式乘法。在实际实现上还会有一些更高效的优化(如蝶形变换)。此处假设$N$为2的整数幂次，因此被称为2为基的FFT算法.而如果数据点数不是以2的整数幂次，处理方法一般有两种，一种是在原始数据开头或末尾补零，即将数据补到以2为基数的整数次方，第二种是采用以任意数为基数的FFT算法，不同的库函数中采用的处理方式可能不同.</p>
+                    
+                      <h4 class="text-lg font-semibold mb-2 mt-4" style="font-size: 30px;">三、短时傅里叶变换（STFT)</h4>
+                      <p>在实际计算中，我们想要得到的往往是不同时间点对应的频率分布，因此需要引入短时傅里叶变换（STFT),其基本思想是将原信号乘上一个窗函数，进而在每个窗口上使用快速傅里叶变换，最后得到频谱图.连续时间的STFT可以写作：</p>
+                      <div class="formula">
+                        \[
+                        \text{STFT}\{f(t)\}(\tau, \omega) \equiv F(\tau, \omega) = \int_{-\infty}^{\infty} f(t) w(t - \tau) e^{-i \omega t} \, dt
+                        \]
+                      </div>
+                      <p>其中$w(t)$为窗函数.</p>
+                      <p>在考虑逆变换时，有：</p>
+                      <div class="formula">
+                        \[
+                        f(t)=\frac{1}{w(t-\tau)}\frac{1}{2\pi}\int_{-\infty}^{\infty} F(\tau,\omega)e^{+i\omega t}d\omega.
+                        \]
+                      </div>
+                      <p>但这仅仅计算了一个窗口的影响，只在$t=\tau$附近能得到比较精确的结果.要得到精确的结果，首先设：</p>
+                      <div class="formula">
+                        \[
+                        \int_{-\infty}^{\infty} w(\tau) d\tau = C.
+                        \]
+                      </div>
+                      <p>那么可以将$f(t)$写作：</p>
+                      <div class="formula">
+                        \[
+                        f(t)=\frac{1}{C}\int_{-\infty}^{\infty}f(t)w(t-\tau)d\tau
+                        \]
+                      </div>
+                      <p>则$f(t)$的傅里叶变换写为：</p>
+                      <div class="formula">
+                        \[
+                        F(\omega)=\frac{1}{C}\int_{-\infty}^{\infty}\left[\int_{-\infty}^{\infty} f(t) w(t-\tau) d\tau\right] e^{-i\omega t} dt
+                        \]
+                      </div>
+                      <p>交换积分次序即可得到：</p>
+                      <div class="formula">
+                        \[
+                        F(\omega)=\frac{1}{C}\int_{-\infty}^{\infty}\left[\int_{-\infty}^{\infty} f(t) w(t-\tau) e^{-i\omega t} dt\right] d\tau=\frac{1}{C}\int_{-\infty}^{\infty} F(\tau, \omega) d\tau
+                        \]
+                      </div>
+                      <p>代回逆变换表达式即可得到：</p>
+                      <div class="formula">
+                        \[
+                        f(t) = \frac{1}{C}\int_{-\infty}^{\infty} \left[ \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\tau, \omega) e^{i\omega t} d\omega \right] d\tau.
+                        \]
+                      </div>
+                      <p>有时为了归一化，会适当设置窗函数使得$C=1$.</p>
+                      <p>在实际使用中，常见的有Hann窗：</p>
+                      <div class="formula">
+                        \[
+                        w(t) = 
+                        \begin{cases} 
+                          \frac{1}{2} \left[ 1 + \cos\left(2\pi \frac{t}{T}\right) \right], & |t| \leq \frac{T}{2}, \\
+                          0, & \text{otherwise}.
+                        \end{cases}
+                        \]
+                      </div>
+                      <p>或截断Gaussian窗($\alpha$是无量纲的控制参数)：</p>
+                      <div class="formula">
+                        \[
+                        w(t) = 
+                        \begin{cases} 
+                          \exp\left[-\frac{1}{2}\left(\frac{t}{\alpha T}\right)^2\right], & |t| \leq \frac{T}{2}, \\
+                          0, & \text{otherwise}.
+                        \end{cases}
+                        \]
+                      </div>
+                      <p>可以发现窗函数本身的时间尺度由$T$决定，如果我们将$T$选择的较小，那么对应的时间分辨率就高，而窗函数本身也会给傅里叶变换带来频率上的影响，也即存在频率分辨率，事实上，这两者之间存在与量子力学中类似的不确定性关系的.为了定量描述这种关系，我们接下来将定义窗函数 $w(t)$ 的时间不确定度 (或有效持续时间) $\Delta t_w$ 和频率不确定度 (或有效带宽) $\Delta \omega_w$.</p>
+                      <p>令窗函数 $w(t)$ 的总能量为 $E_w = \int_{-\infty}^{\infty} |w(t)|^2 dt$。窗函数在时域的时间方差 $(\Delta t_w)^2$ 定义为：</p>
+                      <div class="formula">
+                        \[
+                        (\Delta t_w)^2 = \frac{1}{E_w} \int_{-\infty}^{\infty} t^2 |w(t)|^2 dt
+                        \]
+                      </div>
+                      <p>这里我们考虑一般的窗函数，故将积分区域拓展到整个实轴，窗函数 $w(t)$ 的傅里叶变换 $W(\omega)$ 定义为：</p>
+                      <div class="formula">
+                        \[
+                        W(\omega) = \int_{-\infty}^{\infty} w(t) e^{-i \omega t} dt
+                        \]
+                      </div>
+                      <p>根据帕塞瓦尔定理 (Parseval's Theorem)，$\int_{-\infty}^{\infty} |W(\omega)|^2 d\omega = 2\pi \int_{-\infty}^{\infty} |w(t)|^2 dt = 2\pi E_w$.</p>
+                      <p>窗函数在频域的频率方差 $(\Delta \omega_w)^2$ 定义为：</p>
+                      <div class="formula">
+                        \[
+                        (\Delta \omega_w)^2 = \frac{1}{2\pi E_w} \int_{-\infty}^{\infty} \omega^2 |W(\omega)|^2 d\omega
+                        \]
+                      </div>
+                      <p>利用傅里叶变换的性质，$\frac{dw(t)}{dt} \leftrightarrow i\omega W(\omega)$，并再次使用帕塞瓦尔定理：</p>
+                      <div class="formula">
+                        \[
+                        \int_{-\infty}^{\infty} \left|\frac{dw(t)}{dt}\right|^2 dt = \frac{1}{2\pi} \int_{-\infty}^{\infty} |i\omega W(\omega)|^2 d\omega = \frac{1}{2\pi} \int_{-\infty}^{\infty} \omega^2 |W(\omega)|^2 d\omega
+                        \]
+                      </div>
+                      <p>因此，频率方差可以表示为：</p>
+                      <div class="formula">
+                        \[
+                        (\Delta \omega_w)^2 = \frac{1}{E_w} \int_{-\infty}^{\infty} \left|\frac{dw(t)}{dt}\right|^2 dt
+                        \]
+                      </div>
+                      <p>考虑时间-频率不确定性乘积：</p>
+                      <div class="formula">
+                        \[
+                        (\Delta t_w)^2 (\Delta \omega_w)^2 = \left( \frac{1}{E_w} \int_{-\infty}^{\infty} t^2 |w(t)|^2 dt \right) \left( \frac{1}{E_w} \int_{-\infty}^{\infty} \left|\frac{dw(t)}{dt}\right|^2 dt \right)
+                        \]
+                      </div>
+                      <div class="formula">
+                        \[
+                        (\Delta t_w)^2 (\Delta \omega_w)^2 = \frac{1}{E_w^2} \left( \int_{-\infty}^{\infty} |t w(t)|^2 dt \right) \left( \int_{-\infty}^{\infty} \left|\frac{dw(t)}{dt}\right|^2 dt \right)
+                        \]
+                      </div>
+                      <p>根据柯西-施瓦茨不等式 (Cauchy-Schwarz Inequality)，对于函数 $A(t) = t w(t)$ 和 $B(t) = \frac{dw(t)}{dt}$：</p>
+                      <div class="formula">
+                        \[
+                        \left( \int_{-\infty}^{\infty} |t w(t)|^2 dt \right) \left( \int_{-\infty}^{\infty} \left|\frac{dw(t)}{dt}\right|^2 dt \right) \ge \left| \int_{-\infty}^{\infty} (t w(t)) \left(\frac{dw(t)}{dt}\right)^* dt \right|^2
+                        \]
+                      </div>
+                      <p>因此，</p>
+                      <div class="formula">
+                        \[
+                        (\Delta t_w)^2 (\Delta \omega_w)^2 \ge \frac{1}{E_w^2} \left| \int_{-\infty}^{\infty} t w(t) \frac{dw^*(t)}{dt} dt \right|^2
+                        \]
+                      </div>
+                      <p>令积分项为 $I = \int_{-\infty}^{\infty} t w(t) \frac{dw^*(t)}{dt} dt$。使用分部积分法，令 $u = t w(t)$ 和 $dv = \frac{dw^*(t)}{dt} dt$，则 $du = (w(t) + t \frac{dw(t)}{dt}) dt$ 且 $v = w^*(t)$.</p>
+                      <div class="formula">
+                        \[
+                        I = \left[ t w(t) w^*(t) \right]_{-\infty}^{\infty} - \int_{-\infty}^{\infty} w^*(t) (w(t) + t \frac{dw(t)}{dt}) dt
+                        \]
+                      </div>
+                      <div class="formula">
+                        \[
+                        I = \left[ t |w(t)|^2 \right]_{-\infty}^{\infty} - \int_{-\infty}^{\infty} |w(t)|^2 dt - \int_{-\infty}^{\infty} t w^*(t) \frac{dw(t)}{dt} dt
+                        \]
+                      </div>
+                      <p>对于物理上合理的窗函数 (能量有限且时间方差有限)，$t|w(t)|^2 \to 0$ 当 $t \to \pm\infty$。所以边界项为零.</p>
+                      <div class="formula">
+                        \[
+                        I = -E_w - \left( \int_{-\infty}^{\infty} t w(t) \frac{dw^*(t)}{dt} dt \right)^* = -E_w - I^*
+                        \]
+                      </div>
+                      <p>于是，$I + I^* = -E_w$，即 $2 \text{Re}(I) = -E_w$，故 $\text{Re}(I) = -E_w/2$。</p>
+                      <p>则 $|I|^2 = (\text{Re}(I))^2 + (\text{Im}(I))^2 = \left(-\frac{E_w}{2}\right)^2 + (\text{Im}(I))^2 = \frac{E_w^2}{4} + (\text{Im}(I))^2$。</p>
+                      <p>代回到不等式中：</p>
+                      <div class="formula">
+                        \[
+                        (\Delta t_w)^2 (\Delta \omega_w)^2 \ge \frac{1}{E_w^2} \left( \frac{E_w^2}{4} + (\text{Im}(I))^2 \right) = \frac{1}{4} + \frac{(\text{Im}(I))^2}{E_w^2}
+                        \]
+                      </div>
+                      <p>由于 $(\text{Im}(I))^2/E_w^2 \ge 0$，得到不确定性关系：</p>
+                      <div class="formula">
+                        \[
+                        (\Delta t_w)^2 (\Delta \omega_w)^2 \ge \frac{1}{4}
+                        \]
+                      </div>
+                      <p>取平方根，即：</p>
+                      <div class="formula">
+                        \[
+                        \Delta t_w \Delta \omega_w \ge \frac{1}{2}
+                        \]
+                      </div>
+                      <p>若使用频率 $f = \omega / (2\pi)$，则 $\Delta \omega_w = 2\pi \Delta f_w$，不确定性关系也可写作：</p>
+                      <div class="formula">
+                        \[
+                        \Delta t_w \Delta f_w \ge \frac{1}{4\pi}
+                        \]
+                      </div>
+                      <p>此式表明，窗函数的时间不确定度与频率不确定度之积存在一个下限。这意味着在STFT分析中，时间分辨率和频率分辨率无法同时达到任意高,在实际使用中要根据信号特定和分析需求适当选取参数来同时得到合适的时间与频率分辨率.</p>
+                      <p>该不等式取等的条件是 $(\text{Im}(I))^2 = 0$ (即 $I$ 为实数 $I = -E_w/2$) 并且柯西-施瓦茨不等式中的等号成立.后者要求 $t w(t) = k \frac{dw(t)}{dt}$ 对于某个常数 $k$。解此微分方程可得 $w(t) = C_1 e^{t^2/(2k)}$。为了使 $w(t)$ 能量有限，则 $k$ 必须为负实数.此时 $w(t)$ 为高斯函数形式 $w(t) = C_1 e^{-a t^2}$ ($a>0$).对于理想的高斯窗函数，上述不确定性原理的等号成立.实际中使用的窗函数，如前文提及的Hann窗或截断高斯窗，其时间-频率不确定性乘积一般会大于 $\frac{1}{2}$.</p>
+                      <p>而相对应的，离散的短时傅里叶变换定义为：</p>
+                      <div class="formula">
+                        \[
+                        F(m, k) = \sum_{n=-\infty}^{\infty} f[n] w[n - mH] e^{-i \frac{2\pi k n}{N_{\text{fft}}}}
+                        \]
+                      </div>
+                      <p>其中：</p>
+                      <ul>
+                        <li>$m$ 是时间窗口的索引，对应于连续STFT中的时间变量 $\tau$ (具体对应离散时间位移 $mH$).</li>
+                        <li>$k$ 是频率的索引，对应于连续STFT中的频率变量 $\omega$ (具体对应离散频率 $\frac{2\pi k}{N_{\text{fft}}}$ 或 $\frac{k F_s}{N_{\text{fft}}}$, 其中 $F_s$ 是采样频率).频率索引 $k$ 通常在 $0 \leq k < N_{\text{fft}}$ 范围内.</li>
+                        <li>求和范围原则上是 $-\infty$ 到 $\infty$，但在实际计算中，由于窗函数 $w[n - mH]$ 只在有限范围内非零（长度为 $N_w$），且信号 $f[n]$ 通常也是有限长度的，所以求和实际上只在窗函数覆盖的有效信号区域内进行.</li>
+                        <li>$N_{\text{fft}}$ 是进行DFT的点数，通常选择大于或等于窗函数长度 $N_w$ 的一个2的幂次方，以便使用FFT算法.如果 $N_{\text{fft}} > N_w$，则需要在加窗信号的末尾补零.</li>
+                      </ul>
+                      <p>以离散傅里叶变换为基础，再结合STFT和FFT算法，我们可以快速地处理信号并生成频谱图，从而方便后续分析，也为各种信号处理工具的研发提供了理论依据.</p>
+                      <div class="references mt-6">
+                        <h4 class="text-lg font-semibold mb-3" style="font-size: 30px;">参考文献</h4>
+                        <ol class="list-decimal pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+                          <li>[1] 北京大学2024 - 2025年第二学期《数学物理方法（上）》第九次作业.</li>
+                          <li>[2] <a href="https://zh.wikipedia.org/wiki/%E5%8D%95%E4%BD%8D%E6%A0%B9" target="_blank">https://zh.wikipedia.org/wiki/%E5%8D%95%E4%BD%8D%E6%A0%B9</a></li>
+                          <li>[3] <a href="https://github.com/deezer/spleeter" target="_blank">https://github.com/deezer/spleeter</a></li>
+                          <li>[4] <a href="https://numpy.org/doc/stable/reference/routines.fft.html" target="_blank">https://numpy.org/doc/stable/reference/routines.fft.html</a></li>
+                          <li>[5] <a href="https://www.zhihu.com/question/618071093/answer/3309562922" target="_blank">https://www.zhihu.com/question/618071093/answer/3309562922</a></li>
+                          <li>[6] Anirudha Poria, “Uncertainty principles for the Fourier and the short - time Fourier transforms,” *Journal of Mathematical Physics*, vol. 62, no. 11, Nov. 2021. DOI: 10.1063/5.0047191.</li>
+                        </ol>
+                      </div>
+                    </div>
+                    
+                    <!-- 切换按钮 -->
+                    <button class="toggle-btn">展开全文</button>
+                    
+                    <!-- 粘性“收起”按钮 -->
+                    <button class="sticky-close-btn">收起</button>
+                    
+                    <!-- 样式 -->
+                    <style>
+                        .references {
+                    margin-top: 2rem;
+                    padding-top: 1rem;
+                    border-top: 1px solid #eee;
+                    }
+                    .references h4 {
+                    color: #004085;
+                    margin-bottom: 1rem;
+                    }
+                    .references ol {
+                    list-style-type: decimal;
+                    padding-left: 1.5rem;
+                    color:#2c3e50;
+                    }
+                    .references li {
+                    margin-bottom: 0.5rem;
+                    line-height: 1.6;
+                    }
+                    .references a {
+                    color: #007bff;
+                    text-decoration: underline;
+                    }
+                    .references a:hover {
+                    color: #0069d9;
+                    }
+                    #fft-container {
+                    background: #fff;
+                    color: #2c3e50;
+                    font-size: 1.125rem;
+                    padding: 30px;
+                    font-family: 'Noto Sans SC', sans-serif;
+                    width: 70%; /* 占父容器宽度的70% */
+                    margin: 30px auto; /* 水平居中 */
+                    }
+                      
+                      #fft-container.dark {
+                        background: #2c3e50;
+                        color: #ecf0f1;
+                      }
+                      
+                      #fft-container .full-text {
+                        overflow: hidden;
+                        max-height: 0;
+                        transition: max-height 0.3s ease;
+                        line-height: 2.2;
+                        padding: 0px 100px;
+                      }
+                      
+                      #fft-container[data-expanded="true"] .full-text {
+                        max-height: none;
+                      }
+                      
+                      #fft-container .abstract {
+                        display: block;
+                      }
+                      
+                      #fft-container[data-expanded="true"] .toggle-btn {
+                        display: none;
+                      }
+                      
+                      #fft-container .sticky-close-btn {
+                        position: fixed;
+                        right: 16px;
+                        bottom: 16px;
+                        display: none;
+                        background: #007bff;
+                        color: #fff;
+                        border: none;
+                        border-radius: 50%;
+                        width: 80px;
+                        height: 40px;
+                        font-size: 18px;
+                        line-height: 40px;
+                        text-align: center;
+                        cursor: pointer;
+                        z-index: 1000;
+                        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                        transition: transform 0.2s, box-shadow 0.2s;
+                      }
+                      
+                      #fft-container[data-expanded="true"] .sticky-close-btn {
+                        display: block;
+                      }
+                      
+                      #fft-container .sticky-close-btn:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+                      }
+                      
+                      #fft-container .toggle-btn {
+                        background: #007bff;
+                        color: #fff;
+                        border: none;
+                        padding: 0.5em 1em;
+                        border-radius: 0.25em;
+                        cursor: pointer;
+                        margin-top: 1em;
+                        font-size: 1rem;
+                        transition: background-color 0.2s, transform 0.2s;
+                      }
+                      
+                      #fft-container .toggle-btn:hover {
+                        background-color: #0069d9;
+                        transform: translateY(-1px);
+                      }
+                      
+                      #fft-container .formula {
+                        text-align: center;
+                        margin: 15px 0;
+                        overflow-x: auto;
+                        padding: 10px 0;
+                      }
+                      
+                      #fft-container .formula::-webkit-scrollbar {
+                        height: 4px;
+                      }
+                      
+                      #fft-container .formula::-webkit-scrollbar-track {
+                        background: #f1f1f1;
+                      }
+                      
+                      #fft-container .formula::-webkit-scrollbar-thumb {
+                        background: #888;
+                        border-radius: 2px;
+                      }
+                      
+                      #fft-container .formula::-webkit-scrollbar-thumb:hover {
+                        background: #555;
+                      }
+                      
+                      #fft-container h4 {
+                        color: #004085;
+                        margin-top: 2rem;
+                        padding-bottom: 0.5rem;
+                        border-bottom: 1px solid #eee;
+                      }
+                      
+                      #fft-container ul {
+                        list-style-position: inside;
+                        padding-left: 0;
+                      }
+                      
+                      #fft-container ul li {
+                        margin-bottom: 0.5rem;
+                      }
+                      
+                      /* 响应式设计 */
+                      @media (max-width: 768px) {
+                        #fft-container {
+                          padding-left: 1rem;
+                          padding-right: 1rem;
+                          font-size: 1rem;
+                        }
+                        
+                        #fft-container h4 {
+                          font-size: 1.25rem;
+                        }
+                      }
+                    </style>
+                    
+                    <script>
+                        (function () {
+                          // 动态加载MathJax
+                          const script = document.createElement('script');
+                          script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML';
+                          script.onload = function () {
+                            // 配置MathJax
+                            MathJax.Hub.Config({
+                              tex2jax: {
+                                inlineMath: [['$', '$']], // 配置行内公式的识别符号
+                                displayMath: [['\\[', '\\]']], // 配置块级公式的识别符号
+                                processEscapes: true,
+                                processEnvironments: true
+                              }
+                            });
+                      
+                            const container = document.getElementById('fft-container');
+                            const btnOpen = container.querySelector('.toggle-btn');
+                            const btnClose = container.querySelector('.sticky-close-btn');
+                      
+                            // 展开全文
+                            btnOpen.addEventListener('click', () => {
+                              container.setAttribute('data-expanded', 'true');
+                              // 延迟执行以确保内容完全展开
+                              setTimeout(() => {
+                                window.scrollTo({
+                                  top: container.querySelector('.full-text').offsetTop - 20,
+                                  behavior:'smooth'
+                                });
+                                // 重新渲染MathJax，确保展开后公式正确显示
+                                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                              }, 300);
+                            });
+                      
+                            // 收起全文并滚回顶部
+                            btnClose.addEventListener('click', () => {
+                              container.setAttribute('data-expanded', 'false');
+                              window.scrollTo({
+                                top: 0,
+                                behavior:'smooth'
+                              });
+                            });
+                      
+                            // 监听transitionend事件，在内容展开完成后重新渲染公式
+                            container.addEventListener('transitionend', function () {
+                              if (container.getAttribute('data-expanded') === 'true') {
+                                MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                              }
+                            });
+                          };
+                          document.head.appendChild(script);
+                        })();
+                      </script>
+                </div>
+                  
+
+                <div class="bg-white dark:bg-academic-primary rounded-lg shadow-lg p-6 academic-transition hover:shadow-xl mt-6">
+                    <style type="text/tailwindcss">
+                      @layer utilities {
+                        .academic-shadow {
+                          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                        }
+                        .cyber-border {
+                          border: 1px solid rgba(100, 255, 218, 0.3);
+                        }
+                        .cyber-text-glow {
+                          text-shadow: 0 0 5px rgba(100, 255, 218, 0.7);
+                        }
+                        .academic-transition {
+                          transition: all 0.3s ease;
+                        }
+                        .hover-scale {
+                          transition: transform 0.3s ease;
+                        }
+                        .hover-scale:hover {
+                          transform: scale(1.03);
+                        }
+                        .video-container {
+                          position: relative;
+                          padding-bottom: 56.25%; /* 16:9 比例 */
+                          height: 0;
+                          overflow: hidden;
+                        }
+                        .video-container video {
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                        }
+                        .color-indicator {
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 50%;
+                          margin-right: 8px;
+                          font-size: 0.875rem;
+                        }
+                      }
+                    </style>
+                  
+                    <h2  class="text-2xl font-bold text-academic-primary dark:text-white mb-4">频谱图的引入</h2>
+                    
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                      计算机软件可以通过快速傅里叶变换算法（FFT）将时域信息转化至频域信息，得到频谱图，便于后续分析。频谱图的意义为音色这一模糊特征的量化提供了可能。
+                    </p>
+                    
+                    <p class="text-gray-700 dark:text-gray-300 mb-6">
+                      自初中物理我们就学过声音的三要素-频率，振幅，音色，前两者的物理含义十分清晰：
+                    </p>
+                    
+                    <!-- 振幅部分 -->
+                    <div class="mb-8 hover-scale">
+                      <h3 class="text-xl font-bold text-cyberpunk-secondary cyber-text-glow mb-2">振幅即声音的大小</h3>
+                      
+                      <div class="grid md:grid-cols-12 gap-6 items-center">
+                        <div class="md:col-span-8">
+                          <div class="video-container rounded-lg overflow-hidden shadow-md">
+                            <video src="./素材/视频素材/变幅值.mp4" alt="振幅演示" class="w-full h-auto rounded-lg" controls>
+                              <div class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+                                <div class="text-center p-4">
+                                  <i class="fa-solid fa-video-camera text-4xl mb-2 text-gray-400"></i>
+                                  <p class="text-gray-500">视频占位区域 - 请替换为实际视频</p>
+                                </div>
+                              </div>
+                            </video>
+                          </div>
+                        </div>
+                        
+                        <div class="md:col-span-4">
+                          <p class="text-gray-700 dark:text-gray-300 mb-4 flex items-center">
+                            
+                            <span>颜色越暖代表振幅越强</span>
+                          </p>
+                          <p class="text-gray-600 dark:text-gray-400 text-sm">
+                            振幅反映了声波的振动幅度，对应到声音的大小（响度）。在频谱图中，振幅通常用颜色的深浅或亮度表示，暖色（如红色、橙色）表示较大的振幅，冷色（如蓝色、绿色）表示较小的振幅。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- 频率部分 -->
+                    <div class="mb-8 hover-scale">
+                      <h3 class="text-xl font-bold text-cyberpunk-secondary cyber-text-glow mb-2">频率即音高</h3>
+                      
+                      <div class="grid md:grid-cols-12 gap-6 items-center">
+                        <div class="md:col-span-8">
+                          <div class="video-container rounded-lg overflow-hidden shadow-md">
+                            <video src="./素材/视频素材/变频率.mp4" alt="频率演示" class="w-full h-auto rounded-lg" controls>
+                              <div class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+                                <div class="text-center p-4">
+                                  <i class="fa-solid fa-wave-square text-4xl mb-2 text-gray-400"></i>
+                                  <p class="text-gray-500">视频占位区域 - 请替换为实际视频</p>
+                                </div>
+                              </div>
+                            </video>
+                          </div>
+                        </div>
+                        
+                        <div class="md:col-span-4">
+                          <p class="text-gray-700 dark:text-gray-300 mb-4 flex items-center">
+                            
+                            <span>纵坐标越高代表频率越高</span>
+                          </p>
+                          <p class="text-gray-600 dark:text-gray-400 text-sm" >
+                            频率是指声波每秒振动的次数，对应到声音的高低（音高）。在频谱图中，频率通常用纵坐标表示，低频信号位于底部，高频信号位于顶部。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- 综合部分 -->
+                    <div class="mb-8 hover-scale">
+                      <h3 class="text-xl font-bold text-cyberpunk-secondary cyber-text-glow mb-2">前两者混合</h3>
+                      
+                      <div class="grid md:grid-cols-12 gap-6 items-center">
+                        <div class="md:col-span-8">
+                          <div class="video-container rounded-lg overflow-hidden shadow-md">
+                            <video src="./素材/视频素材/奶龙精简版频谱.mp4" alt="综合演示" class="w-full h-auto rounded-lg" controls>
+                              <div class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
+                                <div class="text-center p-4">
+                                  <i class="fa-solid fa-sliders text-4xl mb-2 text-gray-400"></i>
+                                  <p class="text-gray-500">视频占位区域 - 请替换为实际视频</p>
+                                </div>
+                              </div>
+                            </video>
+                          </div>
+                        </div>
+                        
+                        <div class="md:col-span-4">
+                          <p class="text-gray-700 dark:text-gray-300 mb-4 flex items-center">
+                            
+                            <span>振幅与频率的综合展示</span>
+                          </p>
+                          <p class="text-gray-600 dark:text-gray-400 text-sm" id="yslh">
+                            实际的声音信号通常是复杂的，包含多个频率成分和变化的振幅。频谱图通过二维平面同时展示频率和振幅信息，使我们能够直观地分析声音的频率分布和强度变化，为后续的音频处理和分析提供基础。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                        <strong>但音色这一点却模棱两可，只能被感性描述、如：清脆、浑厚、沙哑、空灵、甜美，难以量化。这次，就让我们利用频谱图做出一次尝试。</strong>
+                      </p>
+                    
+                    <script>
+                      // 初始化函数
+                      document.addEventListener('DOMContentLoaded', function() {
+                        // 为视频占位符添加点击提示
+                        const videos = document.querySelectorAll('video');
+                        videos.forEach(video => {
+                          if (!video.src || video.src === '#') {
+                            video.addEventListener('click', function(e) {
+                              e.preventDefault();
+                              alert('请将此处替换为实际视频');
+                            });
+                          }
+                        });
+                        
+                        // 添加淡入动画
+                        const fadeElements = document.querySelectorAll('.hover-scale');
+                        fadeElements.forEach((el, index) => {
+                          el.style.opacity = '0';
+                          el.style.transform = 'translateY(20px)';
+                          el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                          
+                          setTimeout(() => {
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateY(0)';
+                          }, 100 + index * 150);
+                        });
+                      });
+                    </script>
+                  </div>
+                <!-- 将音色量化部分1 -->
+                <div id="yslh" class="bg-white dark:bg-academic-primary rounded-lg shadow-lg p-6 academic-transition hover:shadow-xl mt-6">
+                    <h2 class="text-2xl font-bold text-gray-200 dark:text-gray-100 mb-4">音色量化维度1——谱质心</h2>
+                    <p class="text-gray-300 dark:text-gray-300 mb-6">现在让我们利用频谱分析，观察小提琴、长笛、小号发同一个音（A4-440Hz）的频谱：</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-gray-50 dark:bg-academic-secondary/20 rounded-lg p-4 hover-scale transition-all duration-300 transform hover:-translate-y-1">
+                            <h4 class="text-xl font-bold text-gray-200 cyber-text-glow mb-4 text-center">小提琴</h4>
+                            <video src="./素材/视频素材/小提琴.mp4" alt="小提琴频谱图" class="w-full h-auto rounded mb-3" controls></video>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-academic-secondary/20 rounded-lg p-4 hover-scale transition-all duration-300 transform hover:-translate-y-1">
+                            <h4 class="text-xl font-bold text-gray-200 cyber-text-glow mb-4 text-center">长笛</h4>
+                            <video src="./素材/视频素材/笛子.mp4" alt="长笛频谱图" class="w-full h-auto rounded mb-3" controls></video>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-academic-secondary/20 rounded-lg p-4 hover-scale transition-all duration-300 transform hover:-translate-y-1">
+                            <h4 class="text-xl font-bold text-gray-200 cyber-text-glow mb-4 text-center">小号</h4>
+                            <video src="./素材/视频素材/小号.mp4" alt="小号频谱图" class="w-full h-auto rounded mb-3" controls></video>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 dark:text-gray-300 mb-6">
+                        听感上，它们的声音逐渐明亮，穿透力增强。将视频放大观察，我们发现频谱中的峰值除了基频（440Hz）外，还有一系列别的峰值，我们称之为——
+                        <span class="relative inline-block text-cyberpunk-accent font-semibold" id="overtone-definition">
+                          泛音
+                          <span class="hidden absolute z-50 bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 bg-gray-800 text-white text-sm rounded-lg p-3 shadow-lg opacity-0 transition-opacity duration-300" id="overtone-tooltip">
+                            泛音是发声体振动时产生的高于基音频率的音，频率为基音整数倍（谐波）或非整数倍，决定声音音色和质感。
+                          </span>
+                        </span>
+                      </p>
+                    
+                    <p class="text-gray-300 dark:text-gray-300 mb-6">而基频和这些泛音的幅值分布，是决定音色的重要因素之一,为了更加方便地量化此特征，我们引入“谱质心”的概念，它的定义如下：</p>
+                    
+                    <div class="bg-gray-100 dark:bg-academic-secondary/30 rounded-lg p-6 mb-8">
+                        <h3 class="text-xl font-bold text-gray-200 dark:text-gray-100 mb-4">谱质心的数学定义</h3>
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md">
+                                <p class="text-lg text-center text-gray-300 dark:text-gray-300">
+                                    $ \text{谱质心} = \frac{\sum_{i=1}^{N} f_i \cdot A(f_i)}{\sum_{i=1}^{N} A(f_i)} $
+                                    
+                                </p>
+                                <p class="text-sm text-gray-400 dark:text-gray-300 text-center mt-2">
+                                    $其中  f_i  是频率， A(f_i)  是对应频率的幅值$
+                                </p>
+                            </div>
+                        </div>
+                        <p class="text-center text-gray-300 dark:text-gray-300">
+                            谱质心频率越高，说明高频部分能量占比高，声音也就越明亮
+                        </p>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-gray-200 dark:text-gray-100 mb-4">四个乐器发出A3-220Hz时的频谱及谱质心数据</h3>
+                    
+                    <div class="grid md:grid-cols-4 gap-4 mb-8">
+                        <div class="bg-gray-50 dark:bg-academic-secondary/20 rounded-lg p-4 hover-scale transition-all duration-300 transform hover:-translate-y-1">
+                            <h4 class="text-lg font-bold text-center text-gray-300 mb-3">中提琴</h4>
+                            <video src="./素材/视频素材/中提琴.mp4" alt="中提琴频谱图" class="w-full h-36 object-cover rounded mb-2" controls></video>
+                            <p class="text-center font-semibold text-gray-300">1721.80 Hz</p>
+                        </div>
+                        
+                        
+                        
+                        <div class="bg-gray-50 dark:bg-academic-secondary/20 rounded-lg p-4 hover-scale transition-all duration-300 transform hover:-translate-y-1">
+                            <h4 class="text-lg font-bold text-center text-gray-300 mb-3">小号</h4>
+                            <video src="./素材/视频素材/小号 (2).mp4" alt="小号频谱图" class="w-full h-36 object-cover rounded mb-2" controls></video>
+                            <p class="text-center font-semibold text-gray-300">1865.70 Hz</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-academic-secondary/20 rounded-lg p-4 hover-scale transition-all duration-300 transform hover:-translate-y-1">
+                            <h4 class="text-lg font-bold text-center text-gray-300 mb-3">小提琴</h4>
+                            <video src="./素材/视频素材/小提琴 (2).mp4" alt="小提琴频谱图" class="w-full h-36 object-cover rounded mb-2" controls></video>
+                            <p class="text-center font-semibold text-gray-300">1814.96 Hz</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-academic-secondary/20 rounded-lg p-4 hover-scale transition-all duration-300 transform hover:-translate-y-1">
+                            <h4 class="text-lg font-bold text-center text-gray-300 mb-3">电子音效</h4>
+                            <video src="./素材/视频素材/电子音效.mp4" alt="电子音效频谱图" class="w-full h-36 object-cover rounded mb-2" controls></video>
+                            <p class="text-center font-semibold text-gray-300">6900.33 Hz</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>    
+
+                <!-- 音色量化维度2：派大星 vs. 特朗普 -->
+                <div id="tone2-container" class="mt-6">
+
+                    <!-- ========== 1. 样式 ========== -->
+                    <style>
+                    .ahdsr-link {
+                        text-decoration: none; /* 初始无下划线 */
+                        color: #0066cc; /* 初始蓝色 */
+                        transition: all 0.3s ease; /* 平滑过渡效果 */
+                    }
+
+                    .ahdsr-link:hover {
+                        text-decoration: underline; /* 鼠标悬停时显示下划线 */
+                        color: #e60000; /* 悬停时变为红色 */
+                    }
+
+                    .ahdsr-link:active {
+                        color: #ff9900; /* 点击时变为橙色 */
+                    }
+                    /* ---- 1.1 设计基准 ---- */
+                    #tone2-container{              /* 灰蓝文字 */
+                        border-radius:0.75rem;         /* rounded-lg */
+                        padding:1.5rem;                /* p-6     */
+                        box-shadow:0 4px 14px rgba(0,0,0,0.12);
+                        transition:box-shadow .3s ease,transform .3s ease;
+                        font-size:1.05rem;
+                        line-height:1.75;
+                    }
+                    #tone2-container:hover{          /* hover:shadow-xl + 微浮动 */
+                        box-shadow:0 10px 24px rgba(0,0,0,0.18);
+                        transform:translateY(-2px);
+                    }
+                
+                    /* ---- 1.2 深色模式（通过给 <html> 或 <body> 加 .dark 即可生效） ---- */
+                    .dark #tone2-container{
+                        background:#243447;            /* dark:bg-academic-primary 感 */
+                        color:#e2e8f0;
+                    }
+                
+                    /* ---- 1.3 复用小工具类 ---- */
+                    #tone2-container .title-lg     {font-size:1.75rem;font-weight:700;margin-bottom:1rem;}
+                    #tone2-container .title-md     {font-size:1.25rem;font-weight:600;margin-bottom:1rem;}
+                    #tone2-container .text-muted   {color:#4a5568;}          /* 灰色说明文字 */
+                    .dark #tone2-container .text-muted{color:#a0aec0;}
+                
+                    /* ---- 1.4 网格布局 ---- */
+                    #tone2-container .grid{
+                        display:grid;
+                        gap:1.25rem;                  /* gap-5 */
+                    }
+                    @media(min-width:768px){        /* md:grid-cols-2 */
+                        #tone2-container .grid-cols-2{grid-template-columns:repeat(2,1fr);}
+                        #tone2-container .grid-cols-4{grid-template-columns:repeat(4,1fr);}
+                    }
+                
+                    /* ---- 1.5 卡片 ---- */
+                    #tone2-container .card{
+                        background:#f9fafb;
+                        border-radius:0.75rem;
+                        padding:1rem;
+                        box-shadow:0 2px 6px rgba(0,0,0,0.06);
+                        transition:transform .3s ease;
+                    }
+                    #tone2-container .card:hover{transform:translateY(-4px);}
+                    .dark #tone2-container .card{background:rgba(255,255,255,0.06);}
+                
+                    /* ---- 1.6 赛博文字高亮 ---- */
+                    #tone2-container .cyber-text{
+                        position:relative;
+                        font-weight:600;
+                        color:#00e0ff;
+                    }
+                    #tone2-container .cyber-text:hover::after{opacity:1;}
+                
+                    /* ---- 1.7 MathJax 行内 / 行间 公式排版 ---- */
+                    #tone2-container .MathJax_SVG{display:inline !important;margin:0 !important;vertical-align:middle !important;}
+                    #tone2-container .MathJax_Display{
+                        text-align:center !important;
+                        margin:1em auto !important;
+                        display:block !important;
+                    }
+                    #tone2-container .MathJax_Display .MathJax_SVG{display:inline-block !important;margin:0 auto !important;}
+                    </style>
+
+                    <!-- ========== 3. 正文内容 ========== -->
+                    <h2 class="title-lg">音色量化维度 2 —— A 值（Attack 斜率）</h2>
+                    <p class="text-muted mb-6">
+                    下面请分别听 <span class="cyber-text">派大星</span> 与 <span class="cyber-text">特朗普</span> 朗诵同一段台词（让子弹飞-我让你翻译给我听...）的录音，并观察它们幅值随时间变化的曲线。（此处应该用峰值频率的幅值更好些，但它并不连续）
+                    </p>
+                
+                    <!-- 3.1 两段音频 -->
+                    <div class="grid grid-cols-2 mb-8">
+                    <div class="card">
+                        <h4 class="text-center font-bold mb-3">派大星</h4>
+                        <audio src="./素材/音频素材/惊喜/派大星-惊喜 00_00_03-00_00_04.mp3" controls class="w-full rounded"></audio>
+                    </div>
+                    <div class="card">
+                        <h4 class="text-center font-bold mb-3">特朗普</h4>
+                        <audio src="./素材/音频素材/惊喜/特-惊喜 00_00_03-00_00_04.mp3" controls class="w-full rounded"></audio>
+                    </div>
+                    </div>
+                
+                    <!-- 3.2 两张图片 -->
+                    <div class="grid grid-cols-2 mb-8">
+                    <div class="card">
+                        <h4 class="text-center font-bold mb-3">派大星 · 幅值轨迹</h4>
+                        <img src="./素材/音频素材/惊喜/派大星-惊喜_3-4秒幅值随时间变化图.png" alt="派大星峰值图" class="w-full rounded">
+                    </div>
+                    <div class="card">
+                        <h4 class="text-center font-bold mb-3">特朗普 · 幅值轨迹</h4>
+                        <img src="./素材/音频素材/惊喜/特-惊喜_3-4秒幅值随时间变化图.png" alt="特朗普峰值图" class="w-full rounded">
+                    </div>
+                    </div>
+                
+                    <!-- 3.3 斜率解释 -->
+                    <p class="text-muted mb-6">
+                    可以看出，<span class="cyber-text">派大星</span> 的曲线斜率更大，说明在峰值之前幅值上升更陡峭，情绪也更加饱满；而 <span class="cyber-text">特朗普</span> 的斜率相对较小。
+                    为了量化这一特征，我们引入<strong>A 值</strong>（源自调音器的 <a href="https://en.m.wikipedia.org/wiki/Envelope_(music)"  target="_blank" class="ahdsr-link">AHDSR</a> 概念 取倒数），其定义如下：
+                    </p>
+                
+                    <!-- 3.4 数学公式占位符（自行修改） -->
+                    <div class="card mb-8">
+                        <p>对每一次起帧：</p>
+                        <p class="text-center" style="text-align: center;">
+                            $ A = \frac{\Delta \text{Amplitude}}{\Delta t}\Bigg|_{\text{attack}} $
+                        </p>
+                        <p>
+                            其中：<br>
+                             $\Delta \text{Amplitude} $表示振幅变化量，具体为从峰值的 <strong>30%</strong> 上升至 <strong>峰值</strong> 的信号幅值变化<br>
+                             $\Delta t $表示与上述振幅变化相对应的时间间隔，将所有A值按照起振时间加权得到总音频的A值<br>
+                             下标 "attack" 表示该参数用于描述信号的 <strong>上升沿（启动阶段）</strong> 特性。
+                             两者的A值分别是0.95和0.81
+                        </p>
+                    </div>
+                    <div class="card mb-8">
+                        
+                        <p>
+                            自此，我们得到两个量化指标<br>
+                            <strong>谱质心</strong>——描述音色的明亮程度，他有别于音高，在基频一致时可以进一步反映声音的特质。<br>
+                            <strong>A值</strong>——来自AHDSR理论，反映起振快慢，感性上反映说话人的语气强烈程度
+                        </p>
+                    </div>
+                
+                    <!-- 3.5 更多示例链接 -->
+                    <p class="text-center">
+                    更多示例请点击页面最上方
+                    <a class="cyber-text">“更多示例”</a>
+                    选项卡
+                    </p>
+                
+                    <!-- ========== 4. 交互脚本（此例仅演示赛博文字 hover 炫光，无额外 JS 逻辑） ========== -->
+                    <!-- 若未来需要复杂交互，可在此补充 -->
+                </div>
+     
+                <script>
+                    // 泛音定义的悬停效果
+                    document.getElementById('overtone-definition').addEventListener('mouseenter', function() {
+                        const tooltip = document.getElementById('overtone-tooltip');
+                        tooltip.classList.remove('hidden');
+                        setTimeout(() => {
+                            tooltip.classList.add('opacity-100');
+                        }, 10);
+                    });
+                    
+                    document.getElementById('overtone-definition').addEventListener('mouseleave', function() {
+                        const tooltip = document.getElementById('overtone-tooltip');
+                        tooltip.classList.remove('opacity-100');
+                        setTimeout(() => {
+                            tooltip.classList.add('hidden');
+                        }, 300);
+                    });
+                    
+                    // 添加悬停缩放效果的CSS
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        .hover-scale {
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        }
+                        .hover-scale:hover {
+                            transform: scale(1.02);
+                            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                        }
+                        .cyber-text-glow {
+                            text-shadow: 0 0 5px rgba(124, 58, 237, 0.5);
+                        }
+                        .academic-transition {
+                            transition: all 0.3s ease;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                </script>
+                    
+             
+                
+
+
+               
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <section id="content-cyberpunk" class="hidden container mx-auto px-4 py-8">
+        <div class="bg-cyberpunk-dark min-h-[80vh] rounded-2xl p-6 cyber-border cyber-glow">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white cyber-text-glow">MORE <span class="text-cyberpunk-secondary">EXAMPLE</span></h1>
+                <div class="flex space-x-3">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+            </div>
+            <!-- 视频播放器 -->
+            <div class="cyberpunk-audio-player w-full max-w-6xl mx-auto bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-2xl border border-cyan-400/30 relative">
+                <!-- 背景效果 -->
+                <div class="absolute inset-0 bg-[url('https://picsum.photos/id/1/1200/800')] bg-cover bg-center opacity-10"></div>
+                <div class="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 to-purple-900/20 mix-blend-overlay"></div>
+                
+                <!-- 顶部装饰 -->
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"></div>
+                <div class="absolute top-1 left-0 w-full h-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400"></div>
+                
+                <!-- 标题区域 -->
+                <div class="p-6 relative z-10">
+                  <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-2">变声实验室</h2>
+                  <p class="text-gray-300 text-sm mb-6">选择视频和变声效果，感受变声效果是否与谱质心，A值匹配</p>
+                </div>
+                
+                <!-- 视频和音频选择区域 -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 relative z-10">
+                  <!-- 视频选择 -->
+                  <div class="lg:col-span-1">
+                    <div class="bg-gray-800/50 rounded-xl p-4 border border-cyan-500/30 shadow-lg">
+                      <h3 class="text-lg font-semibold text-cyan-400 mb-4 flex items-center">
+                        <i class="fa fa-film mr-2"></i>选择视频
+                      </h3>
+                      <div class="space-y-3">
+                        <button class="video-selector w-full p-3 bg-gray-700/50 text-white rounded-lg transition-all duration-300 border-l-4 border-cyan-500 active" data-video="video1">
+                          <span class="flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i>
+                            <span>简爱</span>
+                          </span>
+                        </button>
+                        <button class="video-selector w-full p-3 bg-gray-700/50 text-white rounded-lg transition-all duration-300 border-l-4 border-transparent" data-video="video2">
+                          <span class="flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i>
+                            <span>让子弹飞</span>
+                          </span>
+                        </button>
+                        <button class="video-selector w-full p-3 bg-gray-700/50 text-white rounded-lg transition-all duration-300 border-l-4 border-transparent" data-video="video3">
+                          <span class="flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i>
+                            <span>无问西东</span>
+                          </span>
+                        </button>
+                        <button class="video-selector w-full p-3 bg-gray-700/50 text-white rounded-lg transition-all duration-300 border-l-4 border-transparent" data-video="video4">
+                          <span class="flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i>
+                            <span>从你的全世界路过</span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <!-- 变声效果选择 -->
+                    <div class="bg-gray-800/50 rounded-xl p-4 border border-purple-500/30 shadow-lg mt-6">
+                      <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+                        <i class="fa fa-sliders mr-2"></i>变声效果
+                      </h3>
+                      <div class="space-y-3">
+                        <button class="voice-effect w-full p-3 bg-gray-700/50 hover:bg-purple-600/30 text-white rounded-lg transition-all duration-300 border-l-4 border-purple-500 active" data-effect="original">
+                          <span class="flex items-center">
+                            <i class="fa fa-volume-up mr-2"></i>
+                            <span>原版</span>
+                          </span>
+                        </button>
+                        <button class="voice-effect w-full p-3 bg-gray-700/50 hover:bg-purple-600/30 text-white rounded-lg transition-all duration-300 border-l-4 border-transparent" data-effect="patrick">
+                          <span class="flex items-center">
+                            <i class="fa fa-star mr-2"></i>
+                            <span>派大星</span>
+                          </span>
+                        </button>
+                        <button class="voice-effect w-full p-3 bg-gray-700/50 hover:bg-purple-600/30 text-white rounded-lg transition-all duration-300 border-l-4 border-transparent" data-effect="loid">
+                          <span class="flex items-center">
+                            <i class="fa fa-user mr-2"></i>
+                            <span>劳埃德·福杰</span>
+                          </span>
+                        </button>
+                        <button class="voice-effect w-full p-3 bg-gray-700/50 hover:bg-purple-600/30 text-white rounded-lg transition-all duration-300 border-l-4 border-transparent" data-effect="hatsune">
+                          <span class="flex items-center">
+                            <i class="fa fa-music mr-2"></i>
+                            <span>初音未来</span>
+                          </span>
+                        </button>
+                        <button class="voice-effect w-full p-3 bg-gray-700/50 hover:bg-purple-600/30 text-white rounded-lg transition-all duration-300 border-l-4 border-transparent" data-effect="trump">
+                          <span class="flex items-center">
+                            <i class="fa fa-user-tie mr-2"></i>
+                            <span>特朗普</span>
+                          </span>
+                        </button>
+                        <button class="voice-effect w-full p-3 bg-gray-700/50 hover:bg-purple-600/30 text-white rounded-lg transition-all duration-300 border-l-4 border-transparent" data-effect="speed">
+                          <span class="flex items-center">
+                            <i class="fa fa-bolt mr-2"></i>
+                            <span>IShowSpeed</span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- 视频和图片展示区域 -->
+                  <div class="lg:col-span-2 space-y-6">
+                    <!-- 视频预览 -->
+                    <div class="relative rounded-xl overflow-hidden border-2 border-cyan-400/50 shadow-lg">
+                      <!-- 修复：添加pointer-events-none防止遮挡视频交互 -->
+                      <div class="absolute inset-0 flex items-center justify-center bg-black/70" id="loading-overlay" style="pointer-events: none;">
+                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400"></div>
+                      </div>
+                      <video id="video-player" class="w-full h-auto rounded-xl" controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                      </video>
+                      <div class="absolute bottom-4 right-4 bg-cyan-500/80 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        <span id="current-effect">当前效果: 原版</span>
+                      </div>
+                    </div>
+                    
+                    <!-- 图片展示区域 -->
+                    <div class="bg-gradient-to-r from-gray-800/70 to-gray-900/70 rounded-xl p-6 border border-purple-400/30 shadow-lg relative overflow-hidden">
+                      <!-- 装饰元素 -->
+                      <div class="absolute top-0 right-0 w-24 h-24 bg-purple-500/20 rounded-full blur-2xl"></div>
+                      <div class="absolute bottom-0 left-0 w-16 h-16 bg-cyan-500/20 rounded-full blur-xl"></div>
+                      
+                      <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                          <i class="fa fa-chart-line mr-2 text-cyan-400"></i>
+                          <span>音频分析数据</span>
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <!-- 左边：谱质心图 -->
+                          <div class="bg-gray-800/80 rounded-lg p-4 border border-purple-500/20 transition-all duration-500 transform hover:scale-[1.02]">
+                            <h5 class="text-lg font-semibold text-purple-400 mb-2 flex items-center">
+                              <i class="fa fa-pie-chart mr-2"></i>
+                              <span>谱质心（Hz）</span>
+                            </h5>
+                            <img id="spectral-centroid" src="https://picsum.photos/id/1025/600/400" alt="谱质心" class="w-full h-[0px] object-cover rounded-lg transition-all duration-500">
+                            <div id="spectral-centroid-value" class="text-3xl font-bold text-cyan-400 glow-effect">
+                                000.00
+                              </div>
+                          </div>
+                          
+                          <!-- 右边：AHDSR图 -->
+                          <div class="bg-gray-800/80 rounded-lg p-4 border border-purple-500/20 transition-all duration-500 transform hover:scale-[1.02]">
+                            <h5 class="text-lg font-semibold text-purple-400 mb-2 flex items-center">
+                              <i class="fa fa-line-chart mr-2"></i>
+                              <span>A值</span>
+                            </h5>
+                            <img id="ahdsr-graph" src="https://picsum.photos/id/1026/600/400" alt="AHDSR图" class="w-full h-[0px] object-cover rounded-lg transition-all duration-500">
+                            <div id="a-value" class="text-3xl font-bold text-purple-500 glow-effect">
+                                00.00
+                              </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- 底部信息 -->
+                <div class="p-4 bg-gray-900/80 border-t border-cyan-400/20 text-center text-gray-400 text-xs relative z-10">
+                  <p>声音由<a href="https://finevoice.fineshare.com/" target="_blank">FineVoice</a>处理</p>
+                </div>
+              
+                <script>
+                  // 视频和图谱数据
+                  const mediaData = {
+                    video1: {
+                      name: "简爱",
+                      videoUrl: "./素材/视频素材/简爱.mp4",
+                      videoEffects: {
+                        original: "./素材/视频素材/简爱.mp4",
+                        patrick: "./素材/视频素材/简爱/简爱-派大星.mp4",
+                        loid: "./素材/视频素材/简爱/简爱-福杰.mp4",
+                        hatsune: "./素材/视频素材/简爱/简爱-初音.mp4",
+                        trump: "./素材/视频素材/简爱/简爱-特朗普.mp4",
+                        speed: "./素材/视频素材/简爱/简爱-speed.mp4"
+                      },
+                      /* 新增 —— 谱质心图 & 数值 ******************************/
+    spectralCentroid: {
+      original: { img: "./素材/谱质心/简爱/original.png", val: 5610.35 },
+      patrick:  { img: "./素材/谱质心/简爱/patrick.png",  val: 5835.68 },
+      loid:     { img: "./素材/谱质心/简爱/loid.png",     val: 6677.55 },
+      hatsune:  { img: "./素材/谱质心/简爱/hatsune.png",  val: 7058.95 },
+      trump:    { img: "./素材/谱质心/简爱/trump.png",    val: 5415.33 },
+      speed:    { img: "./素材/谱质心/简爱/speed.png",    val: 4932.39 }
+    },
+
+    /* 新增 —— AHDSR 图 & A 值 ******************************/
+    ahdsrGraph: {
+      original: { img: "./素材/AHDSR/简爱/original.png", val: 0.07 },
+      patrick:  { img: "./素材/AHDSR/简爱/patrick.png",  val: 0.31 },
+      loid:     { img: "./素材/AHDSR/简爱/loid.png",     val: 0.52 },
+      hatsune:  { img: "./素材/AHDSR/简爱/hatsune.png",  val: 0.59 },
+      trump:    { img: "./素材/AHDSR/简爱/trump.png",    val: 0.11 },
+      speed:    { img: "./素材/AHDSR/简爱/speed.png",    val: 0.06 }
+    }
+                      
+                    },
+                    video2: {
+                      name: "让子弹飞",
+                      videoUrl: "./素材/视频素材/惊喜.mp4",
+                      videoEffects: {
+                        original: "./素材/视频素材/惊喜.mp4",
+                        patrick: "./素材/视频素材/让子弹飞/让子弹飞-派大星.mp4",
+                        loid: "./素材/视频素材/让子弹飞/让子弹飞-福杰.mp4",
+                        hatsune: "./素材/视频素材/让子弹飞/让子弹飞-初音.mp4",
+                        trump: "./素材/视频素材/让子弹飞/让子弹飞-特朗普.mp4",
+                        speed: "./素材/视频素材/让子弹飞/让子弹飞-speed.mp4"
+                      },
+                      /* 新增 —— 谱质心图 & 数值 ******************************/
+    spectralCentroid: {
+      original: { img: "./素材/谱质心/简爱/original.png", val: 2791.96 },
+      patrick:  { img: "./素材/谱质心/简爱/patrick.png",  val: 2269.97 },
+      loid:     { img: "./素材/谱质心/简爱/loid.png",     val: 3890.38 },
+      hatsune:  { img: "./素材/谱质心/简爱/hatsune.png",  val: 2994.24 },
+      trump:    { img: "./素材/谱质心/简爱/trump.png",    val: 3878.77 },
+      speed:    { img: "./素材/谱质心/简爱/speed.png",    val: 2786.38 }
+    },
+
+    /* 新增 —— AHDSR 图 & A 值 ******************************/
+    ahdsrGraph: {
+      original: { img: "./素材/AHDSR/简爱/original.png", val: 0.95 },
+      patrick:  { img: "./素材/AHDSR/简爱/patrick.png",  val: 0.95 },
+      loid:     { img: "./素材/AHDSR/简爱/loid.png",     val: 0.99 },
+      hatsune:  { img: "./素材/AHDSR/简爱/hatsune.png",  val: 0.79 },
+      trump:    { img: "./素材/AHDSR/简爱/trump.png",    val: 0.81 },
+      speed:    { img: "./素材/AHDSR/简爱/speed.png",    val: 0.99 }
+    }
+                      
+                    },
+                    video3: {
+                      name: "无问西东",
+                      videoUrl: "./素材/视频素材/无问西东.mp4",
+                      videoEffects: {
+                        original: "./素材/视频素材/无问西东.mp4",
+                        patrick: "./素材/视频素材/无问西东/无问-派大星.mp4",
+                        loid: "./素材/视频素材/无问西东/无问-福杰.mp4",
+                        hatsune: "./素材/视频素材/无问西东/无问-初音.mp4",
+                        trump: "./素材/视频素材/无问西东/无问-特朗普.mp4",
+                        speed: "./素材/视频素材/无问西东/无问-speed.mp4"
+                      },
+                      /* 新增 —— 谱质心图 & 数值 ******************************/
+    spectralCentroid: {
+      original: { img: "./素材/谱质心/简爱/original.png", val: 2404.71 },
+      patrick:  { img: "./素材/谱质心/简爱/patrick.png",  val: 4486.67 },
+      loid:     { img: "./素材/谱质心/简爱/loid.png",     val: 4872.98 },
+      hatsune:  { img: "./素材/谱质心/简爱/hatsune.png",  val: 4581.20 },
+      trump:    { img: "./素材/谱质心/简爱/trump.png",    val: 5722.96 },
+      speed:    { img: "./素材/谱质心/简爱/speed.png",    val: 4434.02 }
+    },
+
+    /* 新增 —— AHDSR 图 & A 值 ******************************/
+    ahdsrGraph: {
+      original: { img: "./素材/AHDSR/简爱/original.png", val: 0.61 },
+      patrick:  { img: "./素材/AHDSR/简爱/patrick.png",  val: 0.94 },
+      loid:     { img: "./素材/AHDSR/简爱/loid.png",     val: 0.92 },
+      hatsune:  { img: "./素材/AHDSR/简爱/hatsune.png",  val: 0.94 },
+      trump:    { img: "./素材/AHDSR/简爱/trump.png",    val: 0.67 },
+      speed:    { img: "./素材/AHDSR/简爱/speed.png",    val: 0.68 }
+    }
+                      
+                    },
+                    video4: {
+                      name: "从你的全世界路过",
+                      videoUrl: "./素材/视频素材/燕子.mp4",
+                      videoEffects: {
+                        original: "./素材/视频素材/燕子.mp4",
+                        patrick: "./素材/视频素材/从你的全世界路过/燕子-派大星.mp4",
+                        loid: "./素材/视频素材/从你的全世界路过/燕子-福杰.mp4",
+                        hatsune: "./素材/视频素材/从你的全世界路过/燕子-初音.mp4",
+                        trump: "./素材/视频素材/从你的全世界路过/燕子-特朗普.mp4",
+                        speed: "./素材/视频素材/从你的全世界路过/燕子-speed.mp4"
+                      },
+                      /* 新增 —— 谱质心图 & 数值 ******************************/
+    spectralCentroid: {
+      original: { img: "./素材/谱质心/简爱/original.png", val: 2186.89 },
+      patrick:  { img: "./素材/谱质心/简爱/patrick.png",  val: 3707.92 },
+      loid:     { img: "./素材/谱质心/简爱/loid.png",     val: 4297.74 },
+      hatsune:  { img: "./素材/谱质心/简爱/hatsune.png",  val: 3854.07 },
+      trump:    { img: "./素材/谱质心/简爱/trump.png",    val: 4713.35 },
+      speed:    { img: "./素材/谱质心/简爱/speed.png",    val: 3705.69 }
+    },
+
+    /* 新增 —— AHDSR 图 & A 值 ******************************/
+    ahdsrGraph: {
+      original: { img: "./素材/AHDSR/简爱/original.png", val: 0.31 },
+      patrick:  { img: "./素材/AHDSR/简爱/patrick.png",  val: 0.80 },
+      loid:     { img: "./素材/AHDSR/简爱/loid.png",     val: 0.68 },
+      hatsune:  { img: "./素材/AHDSR/简爱/hatsune.png",  val: 0.87 },
+      trump:    { img: "./素材/AHDSR/简爱/trump.png",    val: 0.65 },
+      speed:    { img: "./素材/AHDSR/简爱/speed.png",    val: 0.61 }
+    }
+                      
+                    }
+                  };
+                  
+                  // 当前选择
+                  let currentVideo = 'video1';
+                  let currentEffect = 'original'; // 默认显示原版
+                  
+                  // DOM元素
+                  const videoPlayer = document.getElementById('video-player');
+                  const videoSelectors = document.querySelectorAll('.video-selector');
+                  const voiceEffects = document.querySelectorAll('.voice-effect');
+                  const currentEffectEl = document.getElementById('current-effect');
+                  const loadingOverlay = document.getElementById('loading-overlay');
+                  const spectralCentroidImg = document.getElementById('spectral-centroid');
+                  const ahdsrGraphImg = document.getElementById('ahdsr-graph');
+                  
+                  // 初始化
+                  document.addEventListener('DOMContentLoaded', function() {
+                    // 设置初始媒体
+                    setMedia(currentVideo, currentEffect);
+                    
+                    // 视频选择事件
+                    videoSelectors.forEach(selector => {
+                      selector.addEventListener('click', () => {
+                        const videoId = selector.getAttribute('data-video');
+                        if (videoId !== currentVideo) {
+                          selectVideo(videoId);
+                        }
+                      });
+                    });
+                    
+                    // 变声效果选择事件
+                    voiceEffects.forEach(effect => {
+                      effect.addEventListener('click', () => {
+                        const effectId = effect.getAttribute('data-effect');
+                        if (effectId !== currentEffect) {
+                          selectEffect(effectId);
+                        }
+                      });
+                    });
+                    
+                    // 视频加载完成事件 - 修复：确保覆盖层完全隐藏
+                    videoPlayer.addEventListener('loadeddata', () => {
+                      loadingOverlay.classList.add('opacity-0', 'hidden');
+                      loadingOverlay.style.pointerEvents = 'none'; // 确保加载完成后不阻挡交互
+                    });
+                    
+                    // 视频加载开始事件 - 修复：恢复覆盖层可见性和指针事件
+                    videoPlayer.addEventListener('loadstart', () => {
+                      loadingOverlay.classList.remove('hidden');
+                      loadingOverlay.classList.remove('opacity-0');
+                      loadingOverlay.style.pointerEvents = 'auto'; // 加载过程中响应指针事件
+                    });
+                  });
+                  
+                  // 选择视频
+                  function selectVideo(videoId) {
+                    // 更新UI
+                    videoSelectors.forEach(selector => {
+                      if (selector.getAttribute('data-video') === videoId) {
+                        selector.classList.add('bg-cyan-600/30', 'border-cyan-500');
+                        selector.classList.remove('bg-gray-700/50', 'border-transparent');
+                      } else {
+                        selector.classList.remove('bg-cyan-600/30', 'border-cyan-500');
+                        selector.classList.add('bg-gray-700/50', 'border-transparent');
+                      }
+                    });
+                    
+                    // 更新当前选择
+                    currentVideo = videoId;
+                    
+                    // 设置媒体
+                    setMedia(currentVideo, currentEffect);
+                  }
+                  
+                  // 选择变声效果
+                  function selectEffect(effectId) {
+                    // 更新UI
+                    voiceEffects.forEach(effect => {
+                      if (effect.getAttribute('data-effect') === effectId) {
+                        effect.classList.add('bg-purple-600/30', 'border-purple-500');
+                        effect.classList.remove('bg-gray-700/50', 'border-transparent');
+                      } else {
+                        effect.classList.remove('bg-purple-600/30', 'border-purple-500');
+                        effect.classList.add('bg-gray-700/50', 'border-transparent');
+                      }
+                    });
+                    
+                    // 更新当前选择
+                    currentEffect = effectId;
+                    
+                    // 设置媒体
+                    setMedia(currentVideo, currentEffect);
+                  }
+                  
+                  // 设置媒体
+                  function setMedia(videoId, effectId) {
+                  const media = mediaData[videoId];
+
+                    // 开始淡出
+                    fadeOutImages();
+
+                    setTimeout(() => {
+                        /************** 1. 切换视频 **************/
+                        videoPlayer.src = media.videoEffects[effectId];
+                        videoPlayer.load();
+
+                        /************** 2. 切换谱质心 **************/
+                        const sc = media.spectralCentroid[effectId];
+                        spectralCentroidImg.src = sc.img;
+                        // 保留两位小数
+                        document.getElementById('spectral-centroid-value').textContent =
+                        sc.val.toFixed(2);
+
+                        /************** 3. 切换 AHDSR 图 & A 值 **************/
+                        const ag = media.ahdsrGraph[effectId];
+                        ahdsrGraphImg.src = ag.img;
+                        document.getElementById('a-value').textContent =
+                        ag.val.toFixed(2);
+
+                        /************** 4. 更新当前效果文字 **************/
+                        currentEffectEl.textContent = `当前效果: ${getEffectName(effectId)}`;
+
+                        // 淡入
+                        fadeInImages();
+                    }, 300);   // 300 ms 与 CSS 动画节奏一致
+                    }
+
+                  
+                  // 获取效果名称
+                  function getEffectName(effectId) {
+                    const names = {
+                      original: "原版",
+                      patrick: "派大星",
+                      loid: "劳埃德·福杰",
+                      hatsune: "初音未来",
+                      trump: "特朗普",
+                      speed: "IShowSpeed"
+                    };
+                    return names[effectId] || effectId;
+                  }
+                  
+                  // 图片淡入函数
+                  function fadeInImages() {
+                    spectralCentroidImg.classList.add('opacity-100');
+                    spectralCentroidImg.classList.remove('opacity-0');
+                    ahdsrGraphImg.classList.add('opacity-100');
+                    ahdsrGraphImg.classList.remove('opacity-0');
+                  }
+                  
+                  // 图片淡出函数
+                  function fadeOutImages() {
+                    spectralCentroidImg.classList.add('opacity-0');
+                    spectralCentroidImg.classList.remove('opacity-100');
+                    ahdsrGraphImg.classList.add('opacity-0');
+                    ahdsrGraphImg.classList.remove('opacity-100');
+                  }
+                </script>
+              
+                <style>
+                  /* 赛博朋克风格基础样式 */
+                  .cyberpunk-audio-player {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    position: relative;
+                    overflow: hidden;
+                  }
+                  
+                  /* 按钮样式 */
+                  .video-selector.active, .voice-effect.active {
+                    transform: translateX(2px);
+                    
+                  }
+                  
+                  /* 悬停效果 */
+                  .video-selector:hover, .voice-effect:hover {
+                    transform: translateX(2px);
+                    
+                  }
+                  
+                  /* 加载动画 */
+                  #loading-overlay {
+                    z-index: 10; /* 确保在视频上方但不影响交互 */
+                    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+                    opacity: 1;
+                  }
+                  
+                  
+                  video::-webkit-media-controls-play-button {
+                    background-color: #7e22ce;
+                    border-radius: 50%;
+                  }
+                  
+                  video::-webkit-media-controls-current-time-display,
+                  video::-webkit-media-controls-time-remaining-display {
+                    color: #cbd5e1;
+                  }
+                  
+                  video::-webkit-media-controls-timeline {
+                    background-color: #334155;
+                    border-radius: 4px;
+                    margin: 0 10px;
+                  }
+                  
+                  video::-webkit-media-controls-volume-slider {
+                    background-color: #334155;
+                    border-radius: 4px;
+                  }
+                  
+                  /* 渐变文本 */
+                  .text-gradient {
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                  }
+                  
+                  /* 脉冲动画 */
+                  @keyframes pulse {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0.5; }
+                  }
+                  
+                  .pulse {
+                    animation: pulse 2s infinite;
+                  }
+                  
+                  /* 霓虹文本效果 */
+                  .neon-text {
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6;
+                  }
+                  
+                  /* 新增图片展示样式 */
+                  .object-cover {
+                    object-fit: cover;
+                  }
+                  
+                  /* 图片淡入淡出动画 */
+                  #spectral-centroid, #ahdsr-graph {
+                    transition: opacity 0.3s ease-in-out;
+                  }
+                  
+                  .opacity-0 {
+                    opacity: 0;
+                  }
+                  
+                  .opacity-100 {
+                    opacity: 1;
+                  }
+                  
+                  /* 新增隐藏类 */
+                  .hidden {
+                    visibility: hidden;
+                    pointer-events: none; /* 确保隐藏元素不接收事件 */
+                  }
+                  
+                  /* 指针事件样式 */
+                  .pointer-events-none {
+                    pointer-events: none;
+                  }
+                </style>
+              </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="mt-auto py-6 bg-white dark:bg-academic-primary text-center text-gray-600 dark:text-gray-400">
+        <div class="container mx-auto px-4">
+            <p>数学物理方法大作业</p>
+        </div>
+    </footer>
+
+    <script>
+        // 标签切换功能
+        const tabAcademic = document.getElementById('tab-academic');
+        const tabCyberpunk = document.getElementById('tab-cyberpunk');
+        const contentAcademic = document.getElementById('content-academic');
+        const contentCyberpunk = document.getElementById('content-cyberpunk');
+        
+        tabAcademic.addEventListener('click', () => {
+            // 切换标签样式
+            tabAcademic.classList.add('text-academic-primary', 'border-academic-primary');
+            tabAcademic.classList.remove('text-gray-500', 'border-transparent');
+            tabCyberpunk.classList.add('text-gray-500', 'border-transparent');
+            tabCyberpunk.classList.remove('text-academic-primary', 'border-academic-primary');
+            
+            // 切换内容显示
+            contentAcademic.classList.remove('hidden');
+            contentCyberpunk.classList.add('hidden');
+            
+            // 更新页面背景
+            document.body.classList.remove('bg-cyberpunk-dark');
+            document.body.classList.add('bg-academic-light', 'dark:bg-academic-dark');
+            
+            // 更新页脚背景
+            document.querySelector('footer').classList.remove('bg-cyberpunk-primary');
+            document.querySelector('footer').classList.add('bg-white', 'dark:bg-academic-primary');
+        });
+        
+        tabCyberpunk.addEventListener('click', () => {
+            // 切换标签样式
+            tabCyberpunk.classList.add('text-cyberpunk-secondary', 'border-cyberpunk-secondary');
+            tabCyberpunk.classList.remove('text-gray-500', 'border-transparent');
+            tabAcademic.classList.add('text-gray-500', 'border-transparent');
+            tabAcademic.classList.remove('text-academic-primary', 'border-academic-primary');
+            
+            // 切换内容显示
+            contentCyberpunk.classList.remove('hidden');
+            contentAcademic.classList.add('hidden');
+            
+            // 更新页面背景
+            document.body.classList.remove('bg-academic-light', 'dark:bg-academic-dark');
+            document.body.classList.add('bg-cyberpunk-dark');
+            
+            // 更新页脚背景
+            document.querySelector('footer').classList.remove('bg-white', 'dark:bg-academic-primary');
+            document.querySelector('footer').classList.add('bg-cyberpunk-primary');
+        });
+        
+        // 暗黑模式切换
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // 检查用户偏好
+        const isDarkMode = localStorage.getItem('darkMode') === 'true' || 
+                          (localStorage.getItem('darkMode') === null && 
+                           window.matchMedia('(prefers-color-scheme: dark)').matches);
+        
+        // 初始化暗黑模式
+        if (isDarkMode) {
+            html.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fa-solid fa-sun text-yellow-400"></i>';
+        } else {
+            html.classList.remove('dark');
+            themeToggle.innerHTML = '<i class="fa-solid fa-moon text-academic-secondary dark:text-white"></i>';
+        }
+        
+        // 切换暗黑模式
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+            
+            if (isDark) {
+                themeToggle.innerHTML = '<i class="fa-solid fa-sun text-yellow-400"></i>';
+            } else {
+                themeToggle.innerHTML = '<i class="fa-solid fa-moon text-academic-secondary dark:text-white"></i>';
+            }
+        });
+        
+        // 赛博朋克风格中的动态元素
+        if (document.getElementById('content-cyberpunk')) {
+            // 植入体等级动态变化
+            const implantLevel = document.getElementById('implant-level');
+            let level = 12;
+            
+            setInterval(() => {
+                if (Math.random() > 0.8) {
+                    const change = Math.random() > 0.5 ? 1 : -1;
+                    level = Math.max(1, Math.min(20, level + change));
+                    implantLevel.textContent = `LV. ${level}`;
+                }
+            }, 2000);
+        }
+        
+        // 学术页面子标签切换
+        const subtabWhatIsTimbre = document.getElementById('subtab-what-is-timbre');
+        const subtabReferences = document.getElementById('subtab-references');
+        const contentWhatIsTimbre = document.getElementById('content-what-is-timbre');
+        const contentReferences = document.getElementById('content-references');
+        
+        subtabWhatIsTimbre.addEventListener('click', () => {
+            // 切换标签样式
+            subtabWhatIsTimbre.classList.add('text-academic-primary', 'border-academic-primary');
+            subtabWhatIsTimbre.classList.remove('text-gray-500', 'border-transparent');
+            subtabReferences.classList.add('text-gray-500', 'border-transparent');
+            subtabReferences.classList.remove('text-academic-primary', 'border-academic-primary');
+            
+            // 切换内容显示
+            contentWhatIsTimbre.classList.remove('hidden');
+            contentReferences.classList.add('hidden');
+        });
+        
+        subtabReferences.addEventListener('click', () => {
+            // 切换标签样式
+            subtabReferences.classList.add('text-academic-primary', 'border-academic-primary');
+            subtabReferences.classList.remove('text-gray-500', 'border-transparent');
+            subtabWhatIsTimbre.classList.add('text-gray-500', 'border-transparent');
+            subtabWhatIsTimbre.classList.remove('text-academic-primary', 'border-academic-primary');
+            
+            // 切换内容显示
+            contentReferences.classList.remove('hidden');
+            contentWhatIsTimbre.classList.add('hidden');
+        });
+        
+        // 参考文献链接点击处理
+        document.querySelectorAll('a[href="#subtab-references"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                subtabReferences.click();
+                
+                // 平滑滚动到参考文献部分
+                document.getElementById('content-references').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // 赛博朋克滑块交互
+        const slider = document.getElementById('timbre-slider');
+        const sliderTrack = slider.parentElement;
+        const sliderContainer = sliderTrack.parentElement;
+        const sliderMarkers = ['低音提琴', '中提琴', '小提琴', '小号', '电子音效'];
+        const instrumentCards = document.querySelectorAll('.instrument-card');
+
+        // 获取轨道宽度和位置
+        const updateSliderPosition = (e) => {
+            const trackRect = sliderTrack.getBoundingClientRect();
+            const trackWidth = trackRect.width;
+            const clickX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+            let position = ((clickX - trackRect.left) / trackWidth) * 100;
+            
+            // 限制在轨道范围内
+            position = Math.max(0, Math.min(100, position));
+            
+            // 计算最近的乐器索引
+            const instrumentIndex = Math.round(position / 25);
+            position = instrumentIndex * 25;
+            
+            // 更新滑块位置
+            slider.style.left = `${position}%`;
+            slider.dataset.value = position;
+            
+            // 显示对应的乐器卡片
+            instrumentCards.forEach((card, index) => {
+                if (index === instrumentIndex) {
+                    card.classList.add('active');
+                } else {
+                    card.classList.remove('active');
+                }
+            });
+        };
+
+        // 滑块拖动事件
+        slider.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            document.addEventListener('mousemove', updateSliderPosition);
+            document.addEventListener('mouseup', () => {
+                document.removeEventListener('mousemove', updateSliderPosition);
+            });
+        });
+
+        // 滑块触摸事件
+        slider.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            document.addEventListener('touchmove', updateSliderPosition);
+            document.addEventListener('touchend', () => {
+                document.removeEventListener('touchmove', updateSliderPosition);
+            });
+        });
+
+        // 轨道点击事件
+        sliderTrack.addEventListener('click', updateSliderPosition);
+
+        // 初始化滑块位置
+        updateSliderPosition({
+            type: 'click',
+            clientX: sliderTrack.getBoundingClientRect().left + (sliderTrack.getBoundingClientRect().width * 0.5)
+        });
+    </script>
+</body>
+</html>
+
+
+
+>>>>>>> ce3585f7c00f0dcfc7054e1be7492deb3d2ef1b3
     
